@@ -1,4 +1,4 @@
-# Music Label Song Recommender
+# Spotify Music Label Song Recommender
 ### By Justin Williams and Khyatee Desai
 
 ## Overview
@@ -7,11 +7,11 @@ The goal of this project was to build a Spotify recommendation engine for music 
 
 ## Business Problem
 
-Many music record labels need to get exposure for their artists. However, with the plethora of music available through streaming, it has become difficult for record labels to obtain new listeners. That said, wouldn't it be ideal if a record label could take a prospective listeners playlist and provide them with a personalized playlist composed entirely of songs from their artist roster? We thought so, that's why we created this music label song recommender. 
+Many music record labels need to get exposure for their artists. However, with the plethora of music available through streaming, it has become difficult for record labels to obtain new listeners. That said, wouldn't it be ideal if a record label could take a prospective listeners playlist and provide them with a personalized one composed entirely of songs from their artist roster? We thought so, that's why we created this music label song recommender. Subsequentially, this enables prospective listeners to get a preview of a record labels product, specifically taylored to their favorite songs. This provides them with a personalized introduction to the record labels artist roster. 
 
 ## Data
 
-The data used in this project was obtained from a few different sources. Record label roster data was scraped directly from each respective labels website. A dataset gathered from Spotify was downloaded from kaggle, and supplemented with information streamed directly from the Spotify API. The Spotify data obtains audio features for each track:
+The data used in this project was obtained from a few different sources. Record label roster data was scraped directly from each respective labels website. A dataset gathered from Spotify was downloaded from kaggle, and supplemented with information streamed directly from the Spotify API. The Spotify data contains audio features for each track, they are as follows:
 
 | KEY              | VALUE TYPE | VALUE DESCRIPTION                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -33,6 +33,49 @@ The data used in this project was obtained from a few different sources. Record 
 | track_href       | string     | A link to the Web API endpoint providing full details of the track.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | analysis_url     | string     | An HTTP URL to access the full audio analysis of this track. An access token is required to access this data.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | type             | string     | The object type: “audio_features”                                                                                                                                                                                                                                           
+
+## Methods
+
+Describe the process for analyzing or modeling the data. For Phase 1, this will be descriptive analysis.
+
+The aforementioned song attributes from the Spotify API Audio Features Object, enabled us to caculate similarities between specific music record labels catalogs and users inputted playlists. Before caculating similarity metrics, data was preprocessed through the following pipline: 
+- Dropping of unecessary features
+- Feature engineering i.e. decade imputation, key/mode concatenation
+- Outliers bought down to 5 standard deviations from mean
+- Unscaled features scaled
+- Dummy columns created for categorical
+- Scraped record label data merged with Spotify data frame
+
+Once preprocessing steps were complete, recommendations were generated with two distinct techniques:
+1) **Cosine similarity** - Caculating cosine similarities between record label songs and users playlist. 
+2) **KMeans Clustering** - Clustering record labels songs into k clusters and mapping users playlist to the most similiar cluster.
+
+## Results
+
+TBD
+
+### Song distribution by year, by label
+![visual1](./images/label_year_song_hist.png)
+
+### Key/Mode by popularity
+![visual2](./images/key_mode_pop_bar.png)
+
+### Song attribute by label
+![visual3](./images/attr_label_plot.png)
+
+### Most variant song attributes
+![visual4](./images/heatmap_variant_attr.png)
+
+
+## Conclusions
+
+TBD
+
+## For More Information
+
+Please review our full analysis in [our Jupyter Notebooks](./notebooks) or our [presentation](./music_recommender_project_presentation.pdf).
+
+For any additional questions, please contact **Justin Williams - justinmorganwilliams@newschool.edu and Khyatee Desai - khyatee@amazon.com**
 
 ## Repository Structure
 
