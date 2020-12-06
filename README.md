@@ -75,7 +75,7 @@ TBD
 
 Please review our full analysis in [our Jupyter Notebooks](./notebooks) or our [presentation](./music_recommender_project_presentation.pdf).
 
-For any additional questions, please contact **Justin Williams - justinmorganwilliams@newschool.edu and Khyatee Desai - khyatee@amazon.com**
+For any additional questions, please contact **Justin Williams - justinmorganwilliams@newschool.edu and Khyatee Desai - khyatee.d@gmail.com**
 
 ## Repository Structure
 
