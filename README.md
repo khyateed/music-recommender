@@ -88,7 +88,7 @@ Areas for improvement in this process include the following:
 After further iterations, we believe this tool can provide significant value to record labels for the purpose of promoting their lesser-known artists.
 ## For More Information
 
-Please review our full analysis in [our EDA Jupyter Notebook](./data_collection_and_eda.ipynb), [our Modeling Jupyter Notebook](./modeling.ipynb) and [our presentation](./slide_deck.pdf).
+Please review our full analysis in [our EDA notebook](./data_collection_and_eda.ipynb), [Modeling notebook](./modeling.ipynb) and [presentation](./slide_deck.pdf).
 
 For any additional questions, please contact **Justin Williams - justinmorganwilliams@newschool.edu and Khyatee Desai - khyatee.d@gmail.com**
 
