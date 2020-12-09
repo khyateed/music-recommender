@@ -94,8 +94,6 @@ For any additional questions, please contact **Justin Williams - justinmorganwil
 
 ## Repository Structure
 
-Describe the structure of your repository and its contents, for example:
-
 ```
 ├── README.md                                    <- Top-level README for reviewers of this project
 ├── data_collection_and_eda.ipynb                <- Narrative documentation of analysis in Jupyter notebook
